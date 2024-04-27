@@ -29,8 +29,7 @@ O programa deve ser modular, com cada funcionalidade implementada num módulo se
 #include "interface.h"
 
 
-
-int  main() {
+int main() {
 
     Livro *livros; // Ponteiro para array de livros
     livros = NULL; // Inicializa ponteiro com NULL

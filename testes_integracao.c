@@ -1,51 +1,72 @@
 //
-// Created by Vitor Frango on 25/04/2024.
+// Created by Vitor Frango on 26/04/2024.
 //
-
 /*
- * gcc -o testes_integracao testes_integracao.c gestao_livros.c gestao_emprestimos.c gera_relatorios.c interface.c
-    * ./testes_integracao
-
+    gcc -o testes_integracao testes_integracao.c interface.c gestao_livros.c gestao_emprestimos.c
+    ./testes_integracao
+ *
+ *
+ *Para compilar com a flag TESTING:
+    gcc -DTESTING -o teste_integracao testes_integracao.c gestao_livros.c gestao_emprestimos.c
+    ./teste_integracao
+ *
  */
 
+#include <assert.h>
 #include <stdio.h>
+
 #include "gestao_livros.h"
 #include "gestao_emprestimos.h"
-#include "gera_relatorios.h"
 #include "interface.h"
 
-// Teste para integração entre gestao_livros e gestao_emprestimos
-void teste_integra_livro_emprestimo() {
-    // Adicionar um livro
-    int resultado = adicionar_livro("Livro Integração", "Autor Integração");
-    imprimir_resultado("Teste de adicionar livro para integração", resultado == 0);
+// Adicione mais funções de teste conforme necessário
+void test_inicializar_biblioteca() {
+    Livro *livros = NULL;
+    int count = 0;
+    inicializar_biblioteca("livros.csv", &livros, &count);
+    assert(count > 0);
+    assert(livros != NULL);
 
-    // Emprestar o livro
-    resultado = emprestar_livro("Livro Integração", "Usuario Integração");
-    imprimir_resultado("Teste de emprestar livro para integração", resultado == 0);
-
-    // Devolver o livro
-    resultado = devolver_livro("Livro Integração");
-    imprimir_resultado("Teste de devolver livro para integração", resultado == 0);
 }
 
-// Teste para integração entre gestao_emprestimos e gera_relatorios
-void teste_integra_emprestimo_relatorio() {
-    // Emprestar um livro
-    int resultado = emprestar_livro("Livro Integração", "Usuario Integração");
-    imprimir_resultado("Teste de emprestar livro para relatório", resultado == 0);
-
-    // Gerar um relatório
-    resultado = gerar_relatorio();
-    imprimir_resultado("Teste de gerar relatório para integração", resultado == 1);
+// Adicione mais funções de teste conforme necessário
+void test_adicionar_livro() {
+    Livro *livros = NULL;
+    int count = 0;
+    inicializar_biblioteca("livros.csv", &livros, &count);
+    int old_count = count;
+    adicionar_livro(&livros, &count);
+    assert(count == old_count + 1);
+    // Adicione mais asserções conforme necessário
 }
 
-// Função principal para executar testes de integração
+// Adicione mais funções de teste conforme necessário
+void test_empresta_livro() {
+    Livro *livros = NULL;
+    int livro_count = 0;
+    Emprestimo *emprestimos = NULL;
+    int emprestimo_count = 0;
+    inicializar_biblioteca("livros.csv", &livros, &livro_count);
+    carregar_emprestimos("emprestimos.csv", &emprestimos, &emprestimo_count);
+    int old_count = emprestimo_count;
+    empresta_livro(livros, livro_count, &emprestimos, &emprestimo_count);
+    assert(emprestimo_count == old_count + 1);
+    // Adicione mais asserções conforme necessário
+}
+
+#ifdef TESTING // Para compilar com a flag TESTING
 int main() {
-    printf("Executando testes de integração...\n");
+    printf("---------------------------------------\n\n");
 
-    teste_integra_livro_emprestimo();
-    teste_integra_emprestimo_relatorio();
+    printf("Testa a função inicializar_biblioteca...\n");
+    test_inicializar_biblioteca();
+    printf("---------------------------------------\n\n");
+    printf("Testa a função adicionar_livro...\n");
+    test_adicionar_livro();
+    printf("---------------------------------------\n\n");
+    printf("Testa a função empresta_livro...\n");
+    test_empresta_livro();
 
     return 0;
 }
+#endif

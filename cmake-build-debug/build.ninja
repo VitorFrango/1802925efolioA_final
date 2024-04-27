@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: biblioteca
+# Project: 1802925efolioA
 # Configurations: Debug
 # =============================================================================
 
@@ -39,94 +39,239 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/cmake-build-debug/
+cmake_ninja_workdir = /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target biblioteca
+# Object build statements for EXECUTABLE target 1802925efolioA
 
 
 #############################################
-# Order-only phony target for biblioteca
+# Order-only phony target for 1802925efolioA
 
-build cmake_object_order_depends_target_biblioteca: phony || CMakeFiles/biblioteca.dir
+build cmake_object_order_depends_target_1802925efolioA: phony || CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/principal.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/principal.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/principal.c.o.d
+build CMakeFiles/1802925efolioA.dir/principal.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/principal.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/principal.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/gestao_emprestimos.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/gestao_emprestimos.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/gestao_emprestimos.c.o.d
+build CMakeFiles/1802925efolioA.dir/gestao_emprestimos.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_emprestimos.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/gestao_emprestimos.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/gera_relatorios.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/gera_relatorios.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/gera_relatorios.c.o.d
+build CMakeFiles/1802925efolioA.dir/gera_relatorios.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gera_relatorios.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/gera_relatorios.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/gestao_livros.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/gestao_livros.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/gestao_livros.c.o.d
+build CMakeFiles/1802925efolioA.dir/gestao_livros.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_livros.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/gestao_livros.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/interface.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/interface.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/interface.c.o.d
+build CMakeFiles/1802925efolioA.dir/interface.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/interface.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/interface.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
-build CMakeFiles/biblioteca.dir/main.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/main.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/main.c.o.d
+build CMakeFiles/1802925efolioA.dir/testes_integracao.c.o: C_COMPILER__1802925efolioA_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/testes_integracao.c || cmake_object_order_depends_target_1802925efolioA
+  DEP_FILE = CMakeFiles/1802925efolioA.dir/testes_integracao.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
-
-build CMakeFiles/biblioteca.dir/testes_unitarios.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/testes_unitarios.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/testes_unitarios.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
-
-build CMakeFiles/biblioteca.dir/testes_integracao.c.o: C_COMPILER__biblioteca_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/testes_integracao.c || cmake_object_order_depends_target_biblioteca
-  DEP_FILE = CMakeFiles/biblioteca.dir/testes_integracao.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/Cellar/cunit/include
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
-  OBJECT_FILE_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
+  OBJECT_FILE_DIR = CMakeFiles/1802925efolioA.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target biblioteca
+# Link build statements for EXECUTABLE target 1802925efolioA
 
 
 #############################################
-# Link the executable biblioteca
+# Link the executable 1802925efolioA
 
-build biblioteca: C_EXECUTABLE_LINKER__biblioteca_Debug CMakeFiles/biblioteca.dir/principal.c.o CMakeFiles/biblioteca.dir/gestao_emprestimos.c.o CMakeFiles/biblioteca.dir/gera_relatorios.c.o CMakeFiles/biblioteca.dir/gestao_livros.c.o CMakeFiles/biblioteca.dir/interface.c.o CMakeFiles/biblioteca.dir/main.c.o CMakeFiles/biblioteca.dir/testes_unitarios.c.o CMakeFiles/biblioteca.dir/testes_integracao.c.o
+build 1802925efolioA: C_EXECUTABLE_LINKER__1802925efolioA_Debug CMakeFiles/1802925efolioA.dir/principal.c.o CMakeFiles/1802925efolioA.dir/gestao_emprestimos.c.o CMakeFiles/1802925efolioA.dir/gera_relatorios.c.o CMakeFiles/1802925efolioA.dir/gestao_livros.c.o CMakeFiles/1802925efolioA.dir/interface.c.o CMakeFiles/1802925efolioA.dir/testes_integracao.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
-  OBJECT_DIR = CMakeFiles/biblioteca.dir
+  OBJECT_DIR = CMakeFiles/1802925efolioA.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = biblioteca
-  TARGET_PDB = biblioteca.dbg
+  TARGET_FILE = 1802925efolioA
+  TARGET_PDB = 1802925efolioA.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target testes_unitarios_livros
+
+
+#############################################
+# Order-only phony target for testes_unitarios_livros
+
+build cmake_object_order_depends_target_testes_unitarios_livros: phony || CMakeFiles/testes_unitarios_livros.dir
+
+build CMakeFiles/testes_unitarios_livros.dir/testes_unitarios_livros.c.o: C_COMPILER__testes_unitarios_livros_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/testes_unitarios_livros.c || cmake_object_order_depends_target_testes_unitarios_livros
+  DEP_FILE = CMakeFiles/testes_unitarios_livros.dir/testes_unitarios_livros.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_livros.dir
+
+build CMakeFiles/testes_unitarios_livros.dir/gestao_emprestimos.c.o: C_COMPILER__testes_unitarios_livros_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_emprestimos.c || cmake_object_order_depends_target_testes_unitarios_livros
+  DEP_FILE = CMakeFiles/testes_unitarios_livros.dir/gestao_emprestimos.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_livros.dir
+
+build CMakeFiles/testes_unitarios_livros.dir/gera_relatorios.c.o: C_COMPILER__testes_unitarios_livros_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gera_relatorios.c || cmake_object_order_depends_target_testes_unitarios_livros
+  DEP_FILE = CMakeFiles/testes_unitarios_livros.dir/gera_relatorios.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_livros.dir
+
+build CMakeFiles/testes_unitarios_livros.dir/gestao_livros.c.o: C_COMPILER__testes_unitarios_livros_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_livros.c || cmake_object_order_depends_target_testes_unitarios_livros
+  DEP_FILE = CMakeFiles/testes_unitarios_livros.dir/gestao_livros.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_livros.dir
+
+build CMakeFiles/testes_unitarios_livros.dir/interface.c.o: C_COMPILER__testes_unitarios_livros_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/interface.c || cmake_object_order_depends_target_testes_unitarios_livros
+  DEP_FILE = CMakeFiles/testes_unitarios_livros.dir/interface.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_livros.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target testes_unitarios_livros
+
+
+#############################################
+# Link the executable testes_unitarios_livros
+
+build testes_unitarios_livros: C_EXECUTABLE_LINKER__testes_unitarios_livros_Debug CMakeFiles/testes_unitarios_livros.dir/testes_unitarios_livros.c.o CMakeFiles/testes_unitarios_livros.dir/gestao_emprestimos.c.o CMakeFiles/testes_unitarios_livros.dir/gera_relatorios.c.o CMakeFiles/testes_unitarios_livros.dir/gestao_livros.c.o CMakeFiles/testes_unitarios_livros.dir/interface.c.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
+  OBJECT_DIR = CMakeFiles/testes_unitarios_livros.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = testes_unitarios_livros
+  TARGET_PDB = testes_unitarios_livros.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target testes_unitarios_emprestimos
+
+
+#############################################
+# Order-only phony target for testes_unitarios_emprestimos
+
+build cmake_object_order_depends_target_testes_unitarios_emprestimos: phony || CMakeFiles/testes_unitarios_emprestimos.dir
+
+build CMakeFiles/testes_unitarios_emprestimos.dir/testes_unitarios_emprestimos.c.o: C_COMPILER__testes_unitarios_emprestimos_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/testes_unitarios_emprestimos.c || cmake_object_order_depends_target_testes_unitarios_emprestimos
+  DEP_FILE = CMakeFiles/testes_unitarios_emprestimos.dir/testes_unitarios_emprestimos.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+
+build CMakeFiles/testes_unitarios_emprestimos.dir/gestao_emprestimos.c.o: C_COMPILER__testes_unitarios_emprestimos_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_emprestimos.c || cmake_object_order_depends_target_testes_unitarios_emprestimos
+  DEP_FILE = CMakeFiles/testes_unitarios_emprestimos.dir/gestao_emprestimos.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+
+build CMakeFiles/testes_unitarios_emprestimos.dir/gera_relatorios.c.o: C_COMPILER__testes_unitarios_emprestimos_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gera_relatorios.c || cmake_object_order_depends_target_testes_unitarios_emprestimos
+  DEP_FILE = CMakeFiles/testes_unitarios_emprestimos.dir/gera_relatorios.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+
+build CMakeFiles/testes_unitarios_emprestimos.dir/gestao_livros.c.o: C_COMPILER__testes_unitarios_emprestimos_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_livros.c || cmake_object_order_depends_target_testes_unitarios_emprestimos
+  DEP_FILE = CMakeFiles/testes_unitarios_emprestimos.dir/gestao_livros.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+
+build CMakeFiles/testes_unitarios_emprestimos.dir/interface.c.o: C_COMPILER__testes_unitarios_emprestimos_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/interface.c || cmake_object_order_depends_target_testes_unitarios_emprestimos
+  DEP_FILE = CMakeFiles/testes_unitarios_emprestimos.dir/interface.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target testes_unitarios_emprestimos
+
+
+#############################################
+# Link the executable testes_unitarios_emprestimos
+
+build testes_unitarios_emprestimos: C_EXECUTABLE_LINKER__testes_unitarios_emprestimos_Debug CMakeFiles/testes_unitarios_emprestimos.dir/testes_unitarios_emprestimos.c.o CMakeFiles/testes_unitarios_emprestimos.dir/gestao_emprestimos.c.o CMakeFiles/testes_unitarios_emprestimos.dir/gera_relatorios.c.o CMakeFiles/testes_unitarios_emprestimos.dir/gestao_livros.c.o CMakeFiles/testes_unitarios_emprestimos.dir/interface.c.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
+  OBJECT_DIR = CMakeFiles/testes_unitarios_emprestimos.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = testes_unitarios_emprestimos
+  TARGET_PDB = testes_unitarios_emprestimos.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target testes_integracao
+
+
+#############################################
+# Order-only phony target for testes_integracao
+
+build cmake_object_order_depends_target_testes_integracao: phony || CMakeFiles/testes_integracao.dir
+
+build CMakeFiles/testes_integracao.dir/testes_integracao.c.o: C_COMPILER__testes_integracao_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/testes_integracao.c || cmake_object_order_depends_target_testes_integracao
+  DEP_FILE = CMakeFiles/testes_integracao.dir/testes_integracao.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_integracao.dir
+
+build CMakeFiles/testes_integracao.dir/gestao_emprestimos.c.o: C_COMPILER__testes_integracao_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_emprestimos.c || cmake_object_order_depends_target_testes_integracao
+  DEP_FILE = CMakeFiles/testes_integracao.dir/gestao_emprestimos.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_integracao.dir
+
+build CMakeFiles/testes_integracao.dir/gera_relatorios.c.o: C_COMPILER__testes_integracao_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gera_relatorios.c || cmake_object_order_depends_target_testes_integracao
+  DEP_FILE = CMakeFiles/testes_integracao.dir/gera_relatorios.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_integracao.dir
+
+build CMakeFiles/testes_integracao.dir/gestao_livros.c.o: C_COMPILER__testes_integracao_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/gestao_livros.c || cmake_object_order_depends_target_testes_integracao
+  DEP_FILE = CMakeFiles/testes_integracao.dir/gestao_livros.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_integracao.dir
+
+build CMakeFiles/testes_integracao.dir/interface.c.o: C_COMPILER__testes_integracao_unscanned_Debug /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/interface.c || cmake_object_order_depends_target_testes_integracao
+  DEP_FILE = CMakeFiles/testes_integracao.dir/interface.c.o.d
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  OBJECT_FILE_DIR = CMakeFiles/testes_integracao.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target testes_integracao
+
+
+#############################################
+# Link the executable testes_integracao
+
+build testes_integracao: C_EXECUTABLE_LINKER__testes_integracao_Debug CMakeFiles/testes_integracao.dir/testes_integracao.c.o CMakeFiles/testes_integracao.dir/gestao_emprestimos.c.o CMakeFiles/testes_integracao.dir/gera_relatorios.c.o CMakeFiles/testes_integracao.dir/gestao_livros.c.o CMakeFiles/testes_integracao.dir/interface.c.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
+  OBJECT_DIR = CMakeFiles/testes_integracao.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = testes_integracao
+  TARGET_PDB = testes_integracao.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/biblioteca/cmake-build-debug" && /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd "/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/1802925efolioA/cmake-build-debug" && /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -137,7 +282,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/biblioteca/cmake-build-debug" && /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/biblioteca" -B"/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/biblioteca/cmake-build-debug"
+  COMMAND = cd "/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/1802925efolioA/cmake-build-debug" && /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/1802925efolioA" -B"/Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/1802925efolioA/cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -153,9 +298,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/biblioteca/cmake-build-debug
+# Folder: /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1 Ano/Laboratorio de Programação/1802925efolioA/cmake-build-debug
 
-build all: phony biblioteca
+build all: phony 1802925efolioA testes_unitarios_livros testes_unitarios_emprestimos testes_integracao
 
 # =============================================================================
 # Built-in targets
@@ -164,14 +309,14 @@ build all: phony biblioteca
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/biblioteca/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/vitorfrango/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vitorfrango/Library/CloudStorage/OneDrive-UniversidadeAberta/1$ Ano/Laboratorio$ de$ Programação/1802925efolioA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

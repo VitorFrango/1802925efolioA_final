@@ -8,7 +8,7 @@
 #include <errno.h>  // Para `strerror`
 
 
-
+// Função para inicializar a biblioteca de livros
 int copias_atuais(int copias, int copias_emprestadas) {
     return copias - copias_emprestadas;
 }
@@ -35,7 +35,9 @@ int id_exists_in_emprestimos(FILE *emprestimosFile, int id) {
 }
 
 // Função para copiar dados de livros para empréstimos
-void copiarDadosLivrosParaEmprestimos(const char *livrosFilePath, const char *emprestimosFilePath, const char *posFilePath, int emprestimo_count) {
+void
+copiarDadosLivrosParaEmprestimos(const char *livrosFilePath, const char *emprestimosFilePath, const char *posFilePath,
+                                 int emprestimo_count) {
     FILE *livrosFile = fopen(livrosFilePath, "r");
     FILE *emprestimosFile = fopen(emprestimosFilePath, "a+");
     FILE *posFile = fopen(posFilePath, "r+");
@@ -51,19 +53,21 @@ void copiarDadosLivrosParaEmprestimos(const char *livrosFilePath, const char *em
         lastPos = 0; // Se falhar, começar do início
     }
 
-    fseek(livrosFile, lastPos, SEEK_SET);
+    fseek(livrosFile, lastPos, SEEK_SET);  // Posiciona no último ponto lido
 
     Livro livro;
     char buffer_emprestimo[20];
     char buffer_devolucao[20];
 
     for (int i = 0; i < emprestimo_count; i++) {
-        if (fscanf(livrosFile, "%d,%99[^,],%99[^,],%49[^,],%d\n", &livro.id, livro.titulo, livro.autor, livro.genero, &livro.copias) != 5) {
+        if (fscanf(livrosFile, "%d,%99[^,],%99[^,],%49[^,],%d\n", &livro.id, livro.titulo, livro.autor, livro.genero,
+                   &livro.copias) != 5) {
             fprintf(stderr, "Erro na leitura dos dados do livro: %s\n", strerror(errno));
             fechar_arquivos(livrosFile, emprestimosFile, posFile);
             return;
         }
 
+        // Verifica se o livro já foi emprestado
         if (!id_exists_in_emprestimos(emprestimosFile, livro.id)) {
             Emprestimo emprestimo;
             emprestimo.id = livro.id;
@@ -104,9 +108,11 @@ void copiarDadosLivrosParaEmprestimos(const char *livrosFilePath, const char *em
     rewind(posFile); // Reposiciona para reescrever a posição
     fprintf(posFile, "%ld", lastPos);
 
+    // Fecha os arquivos
     fechar_arquivos(livrosFile, emprestimosFile, posFile); // Garante fechamento seguro
 }
 
+// Função para carregar empréstimos de um arquivo CSV
 void carregar_emprestimos(const char *filename, Emprestimo **emprestimos, int *emprestimo_count) {
     FILE *file = fopen(filename, "r+");
     if (file == NULL) {
@@ -115,8 +121,8 @@ void carregar_emprestimos(const char *filename, Emprestimo **emprestimos, int *e
     }
 
     Emprestimo temp;
-    char buffer_emprestimo[20], buffer_devolucao[20];
-    while (fscanf(file, "%d,%[^,],%[^,],%[^,],%[^,],%d,%d,%d,%[^,],%[^,],%s\n",
+    char buffer_emprestimo[20], buffer_devolucao[20]; // Buffers para armazenar datas
+    while (fscanf(file, "%d,%[^,],%[^,],%[^,],%[^,],%d,%d,%d,%d,%[^,],%[^,]\n",
                   &temp.id,
                   temp.titulo,
                   temp.autor,
@@ -125,16 +131,17 @@ void carregar_emprestimos(const char *filename, Emprestimo **emprestimos, int *e
                   &temp.copias_emprestadas,
                   &temp.copias,
                   &temp.copias_atuais,
+                  &temp.is_devolvido,
                   buffer_emprestimo,
-                  buffer_devolucao) == 10) {
-        // Convert the date strings to time_t
+                  buffer_devolucao) == 11) { // Lê os campos do arquivo
+        // Converte as datas de string para time_t
         struct tm tm;
         strptime(buffer_emprestimo, "%Y-%m-%d %H:%M:%S", &tm);
         temp.data_emprestimo = mktime(&tm);
         strptime(buffer_devolucao, "%Y-%m-%d %H:%M:%S", &tm);
         temp.data_devolucao = mktime(&tm);
 
-        // Add the record to the array
+        // Realoca memória para adicionar um novo registro ao array
         Emprestimo *new_ptr = realloc(*emprestimos, (*emprestimo_count + 1) * sizeof(Emprestimo));
         if (new_ptr == NULL) {
             fprintf(stderr, "Error reallocating memory: %s\n", strerror(errno));
@@ -150,7 +157,7 @@ void carregar_emprestimos(const char *filename, Emprestimo **emprestimos, int *e
 
 
 // Função para emprestar um livro
-void empresta_livro(Livro* livros, int count, Emprestimo** emprestimos, int* emprestimo_count) {
+void empresta_livro(Livro *livros, int count, Emprestimo **emprestimos, int *emprestimo_count) {
     int livro_id;
     char user[MAX_UTILIZADOR];
 
@@ -161,7 +168,7 @@ void empresta_livro(Livro* livros, int count, Emprestimo** emprestimos, int* emp
 
     printf("Digite o nome do locatário: \n");
     scanf("%[^\n]", user);
-    getchar(); // Limpa o buffer do stdin
+    getchar();
 
     int livro_encontrado = 0;
 
@@ -172,15 +179,17 @@ void empresta_livro(Livro* livros, int count, Emprestimo** emprestimos, int* emp
             if (livros[i].copias > 0) { // Verifica se há cópias disponíveis
                 livros[i].copias--;
 
-                Emprestimo* temp = realloc(*emprestimos, (*emprestimo_count + 1) * sizeof(Emprestimo));
+                // Realoca memória para adicionar um novo empréstimo
+                Emprestimo *temp = realloc(*emprestimos, (*emprestimo_count + 1) * sizeof(Emprestimo));
                 if (temp == NULL) {
                     fprintf(stderr, "Erro ao alocar memória para o empréstimo: %s\n", strerror(errno));
                     return;
                 }
 
                 *emprestimos = temp;
-                Emprestimo* novo_emprestimo = &(*emprestimos)[*emprestimo_count];
+                Emprestimo *novo_emprestimo = &(*emprestimos)[*emprestimo_count];
 
+                // Copia os dados do livro para o empréstimo
                 novo_emprestimo->id = livros[i].id;
                 strcpy(novo_emprestimo->titulo, livros[i].titulo);
                 strcpy(novo_emprestimo->autor, livros[i].autor);
@@ -229,7 +238,7 @@ void devolver_livro(Livro *livros, int count, Emprestimo **emprestimos, int *emp
     while (getchar() != '\n'); // Limpa o buffer do stdin
     scanf("%d", &id);
 
-    if (*emprestimo_count == 0) {
+    if (*emprestimo_count == 0) { // Verifica se há empréstimos
         printf("Nenhum livro emprestado.\n");
         return;
     }
@@ -314,6 +323,7 @@ int arquivo_tem_cabecalho(FILE *file) {
     return strstr(buffer, "id,titulo,autor,genero,user,data_emprestimo,data_devolucao") != NULL;
 }
 
+// Função para guardar os empréstimos num arquivo CSV
 void guardar_emprestimo(const char *filename, Emprestimo *emprestimos, int emprestimo_count) {
     FILE *file = fopen(filename, "a+"); // Modo de leitura/escrita
     if (file == NULL) {
@@ -323,17 +333,21 @@ void guardar_emprestimo(const char *filename, Emprestimo *emprestimos, int empre
 
     // Verifica se o cabeçalho já existe, e adiciona se necessário
     if (!arquivo_tem_cabecalho(file)) {
-        fprintf(file, "id,titulo,autor,genero,copias,user,copias_atuais,copias_emprestadas,is_devolvido,data_emprestimo,data_devolucao\n");
+        fprintf(file,
+                "id,titulo,autor,genero,copias,user,copias_atuais,copias_emprestadas,is_devolvido,data_emprestimo,data_devolucao\n");
     }
 
     char buffer_emprestimo[20], buffer_devolucao[20]; // Para armazenar as datas formatadas
 
     for (int i = 0; i < emprestimo_count; i++) {
         // Formata a data de empréstimo
-        strftime(buffer_emprestimo, sizeof(buffer_emprestimo), "%Y-%m-%d %H:%M:%S", localtime(&emprestimos[i].data_emprestimo));
+        strftime(buffer_emprestimo, sizeof(buffer_emprestimo), "%Y-%m-%d %H:%M:%S",
+                 localtime(&emprestimos[i].data_emprestimo));
 
         // Formata a data de devolução
-        strftime(buffer_devolucao, sizeof(buffer_devolucao), "%Y-%m-%d %H:%M:%S", localtime(&emprestimos[i].data_devolucao));
+        strftime(buffer_devolucao, sizeof(buffer_devolucao), "%Y-%m-%d %H:%M:%S",
+                 localtime(&emprestimos[i].data_devolucao));
+
 
         // Grava no arquivo
         fprintf(file, "%d,%s,%s,%s,%d,%s,%d,%d,%d,%s,%s\n",

@@ -1,13 +1,13 @@
 //
 // Created by Vitor Frango on 12/04/2024.
 //
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <errno.h>  // Para `strerror`
-#include "gera_relatorios.h" // Certifique-se de incluir corretamente o cabeçalho necessário
-
+#include "gera_relatorios.h"
 
 
 // Função para carregar os empréstimos do arquivo CSV
@@ -24,7 +24,7 @@ void relatorio_carregar_emprestimos(const char *filename, Emprestimo **emprestim
     }
 
     Emprestimo temp;
-    char buffer_emprestimo[20], buffer_devolucao[20];
+    char buffer_emprestimo[20], buffer_devolucao[20]; // Buffers para armazenar datas
 
     // Loop para ler cada linha do arquivo CSV
     while (fscanf(file, "%d,%99[^,],%99[^,],%49[^,],%d,%99[^,],%d,%d,%d,%19[^,],%19[^,],%d\n",
@@ -51,6 +51,7 @@ void relatorio_carregar_emprestimos(const char *filename, Emprestimo **emprestim
         }
         temp.data_emprestimo = mktime(&tm);
 
+        // Converte as datas de string para time_t
         if (strptime(buffer_devolucao, "%Y-%m-%d %H:%M:%S", &tm) == NULL) {
             printf("Erro ao converter data de devolução.\n");
             continue;
@@ -66,7 +67,7 @@ void relatorio_carregar_emprestimos(const char *filename, Emprestimo **emprestim
         }
 
         *emprestimos = new_ptr; // Atualiza o ponteiro para o novo array
-        (*emprestimos)[*emprestimo_count] = temp;
+        (*emprestimos)[*emprestimo_count] = temp; // Adiciona o novo registro
         (*emprestimo_count)++;
     }
 
@@ -75,6 +76,7 @@ void relatorio_carregar_emprestimos(const char *filename, Emprestimo **emprestim
 
 // Função para encontrar livros mais emprestados
 void livros_mais_emprestados(Emprestimo *emprestimos, int emprestimo_count) {
+    carregar_emprestimos("emprestimos.csv", &emprestimos, &emprestimo_count);
     if (emprestimo_count == 0) {
         printf("Nenhum empréstimo encontrado.\n");
         return;
@@ -98,8 +100,8 @@ void livros_mais_emprestados(Emprestimo *emprestimos, int emprestimo_count) {
             }
         }
 
-        if (!found) {
-            LivroCount *new_counts = (LivroCount *)realloc(counts, (num_livros + 1) * sizeof(LivroCount));
+        if (!found) { // Se o livro não foi encontrado
+            LivroCount *new_counts = (LivroCount *) realloc(counts, (num_livros + 1) * sizeof(LivroCount));
             if (new_counts == NULL) {
                 printf("Erro ao realocar memória para a lista de livros.\n");
                 free(counts); // Liberação de memória para evitar vazamentos
@@ -122,6 +124,7 @@ void livros_mais_emprestados(Emprestimo *emprestimos, int emprestimo_count) {
     }
 
     printf("Livros mais emprestados:\n");
+    // Exibir livros com o número máximo de empréstimos
     for (int i = 0; i < num_livros; i++) {
         if (counts[i].count == max_emprestimos) {
             printf("Título: %s\n", counts[i].titulo);
@@ -129,12 +132,13 @@ void livros_mais_emprestados(Emprestimo *emprestimos, int emprestimo_count) {
         }
     }
 
-    free(counts); // Libera memória para evitar vazamentos
+    free(counts); // Liberta memória para evitar vazamentos
 }
 
 // Função para listar livros não devolvidos
 void livros_nao_devolvidos(Emprestimo *emprestimos, int emprestimo_count) {
-    if (emprestimo_count == 0) {
+    carregar_emprestimos("emprestimos.csv", &emprestimos, &emprestimo_count);
+    if (emprestimo_count == 0) { // Verifica se há empréstimos
         printf("Nenhum empréstimo encontrado.\n");
         return;
     }
@@ -150,9 +154,15 @@ void livros_nao_devolvidos(Emprestimo *emprestimos, int emprestimo_count) {
     }
 }
 
+// Função para listar locatários com mais livros emprestados
 void locatarios_com_mais_livros_emprestados(Emprestimo **emprestimos, int *emprestimo_count) {
     relatorio_carregar_emprestimos("emprestimos.csv", emprestimos, emprestimo_count);
-    UserCount *counts = NULL;
+    if (*emprestimo_count <= 0) {
+        printf("Nenhum empréstimo encontrado.\n");
+        return;
+    }
+
+    UserCount *counts = NULL; // Array para contar usuários
     int num_users = 0;
 
     // Contar empréstimos por usuário
@@ -167,14 +177,14 @@ void locatarios_com_mais_livros_emprestados(Emprestimo **emprestimos, int *empre
         }
 
         if (!found) {
-            UserCount *new_counts = (UserCount *)realloc(counts, (num_users + 1) * sizeof(UserCount));
+            UserCount *new_counts = (UserCount *) realloc(counts, (num_users + 1) * sizeof(UserCount));
             if (new_counts == NULL) {
                 printf("Erro ao realocar a lista de usuários.\n");
                 free(counts);
                 return;
             }
 
-            counts = new_counts;
+            counts = new_counts; // Atualiza o ponteiro para o novo array
             strncpy(counts[num_users].nome, (*emprestimos)[i].user, sizeof(counts[num_users].nome) - 1);
             counts[num_users].nome[sizeof(counts[num_users].nome) - 1] = '\0';
             counts[num_users].count = 1;
@@ -182,8 +192,13 @@ void locatarios_com_mais_livros_emprestados(Emprestimo **emprestimos, int *empre
         }
     }
 
-    int max_emprestimos = 0;
-    for (int i = 0; i < num_users; i++) {
+    if (num_users == 0) {
+        printf("Nenhum locatário encontrado.\n");
+        return;
+    }
+
+    int max_emprestimos = counts[0].count; // Encontra o número máximo de empréstimos
+    for (int i = 1; i < num_users; i++) {
         if (counts[i].count > max_emprestimos) {
             max_emprestimos = counts[i].count;
         }
@@ -199,3 +214,4 @@ void locatarios_com_mais_livros_emprestados(Emprestimo **emprestimos, int *empre
 
     free(counts);
 }
+

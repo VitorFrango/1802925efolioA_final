@@ -11,42 +11,48 @@
 #include "interface.h"
 
 
-
+// Funções para exibir menus
 void exibir_menu_principal(Livro **livros, int *livro_count, Emprestimo **emprestimos, int *emprestimo_count);
+
 void menu_gestao_livros(Livro **livros, int *livro_count);
+
+void exibir_menu_pesquisa_livros(Livro *livros, int count);
+
 void menu_gestao_emprestimos(Livro **livros, int *livro_count, Emprestimo **emprestimos, int *emprestimo_count);
+
 void menu_relatorios(Emprestimo **emprestimos, int *emprestimo_count);
 
 // Protótipos de funções para a gestão de livros
 void adicionar_livro(Livro **livros, int *livro_count);
+
 void remover_livro_por_id(Livro **livros, int *count, int id);
+
 void editar_livro(Livro *livros, int count, int id);
-void pesquisar_livros(const char *filename, const char *titulo_procura);
+
+void pesquisar_livros(Livro *livros, int count, const char *termo);
 
 
 // Protótipos de funções para a gestão de empréstimos
 void empresta_livro(Livro *livros, int count, Emprestimo **emprestimos, int *emprestimo_count);
 
 // Protótipos de funções para a gestão de empréstimos
-
 void remover_livro_por_id(Livro **livros, int *count, int id);
+
 void devolver_livro(Livro *livros, int livro_count, Emprestimo **emprestimos, int *emprestimo_count);
+
 void renovar_emprestimo(Emprestimo *emprestimos, int emprestimo_count);
 
 // Protótipos de funções para relatórios
 void livros_mais_emprestados(Emprestimo *emprestimos, int emprestimo_count);
-void relatorio_livros_nao_devolvidos(Emprestimo *emprestimos, int emprestimo_count);
-void locatarios_com_mais_emprestimos(Emprestimo *emprestimos, int emprestimo_count);
+
+void livros_nao_devolvidos(Emprestimo *emprestimos, int emprestimo_count);
+
+void locatarios_com_mais_livros_emprestados(Emprestimo **emprestimos, int *emprestimo_count);
 
 // Funções para salvar dados
 void guardar_livros(const char *arquivo, Livro *livros, int livro_count);
+
 void guardar_emprestimo(const char *arquivo, Emprestimo *emprestimos, int emprestimo_count);
 
-
-
-
-int remover_livro(Livro **livros, int *livro_count, char *nome);
-int emprestar_livro(Livro **livros, int *livro_count, char *nome, char *usuario);
-int gerar_relatorio(Emprestimo **emprestimos, int *emprestimo_count);
 
 #endif // INTERFACE_H
